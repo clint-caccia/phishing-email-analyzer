@@ -1,0 +1,19 @@
+source_file,verdict,type,value
+samples/02_credential_phish.eml,LIKELY PHISHING,sender_email,no-reply@micros0ft-account.example
+samples/02_credential_phish.eml,LIKELY PHISHING,sender_domain,micros0ft-account.example
+samples/02_credential_phish.eml,LIKELY PHISHING,reply_to,support-desk@mailbox-helpdesk.example
+samples/02_credential_phish.eml,LIKELY PHISHING,url,http://micros0ft-account.example/login?u=frontdesk
+samples/02_credential_phish.eml,LIKELY PHISHING,domain,micros0ft-account.example
+samples/02_credential_phish.eml,LIKELY PHISHING,received_ip,203.0.113.66
+samples/03_invoice_attachment.eml,LIKELY PHISHING,sender_email,dse@docusign-secure.example
+samples/03_invoice_attachment.eml,LIKELY PHISHING,sender_domain,docusign-secure.example
+samples/03_invoice_attachment.eml,LIKELY PHISHING,url,https://bit.ly/3xExample
+samples/03_invoice_attachment.eml,LIKELY PHISHING,domain,bit.ly
+samples/03_invoice_attachment.eml,LIKELY PHISHING,url,http://198.51.100.140/inv/4471
+samples/03_invoice_attachment.eml,LIKELY PHISHING,domain,198.51.100.140
+samples/03_invoice_attachment.eml,LIKELY PHISHING,received_ip,198.51.100.140
+samples/03_invoice_attachment.eml,LIKELY PHISHING,attachment_sha256,8447f97f4708cfbbd7198e8ca567ad9792a99b7816f0b5fc06aad9a3e66a7195  Invoice_4471.pdf.html
+samples/04_bec_gift_cards.eml,SUSPICIOUS,sender_email,ellen.hart.office@gmail.com
+samples/04_bec_gift_cards.eml,SUSPICIOUS,sender_domain,gmail.com
+samples/04_bec_gift_cards.eml,SUSPICIOUS,reply_to,ellen.hart.office@gmail.com
+samples/04_bec_gift_cards.eml,SUSPICIOUS,received_ip,192.0.2.200

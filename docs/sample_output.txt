@@ -1,0 +1,99 @@
+================================================================
+File:     samples/01_legit_newsletter.eml
+Subject:  November staff newsletter
+From:     Blue Ridge Family Dental <updates@blueridgedental.example>
+Links: 1   Attachments: 0
+----------------------------------------------------------------
+Risk score: 0/100   Verdict: LIKELY SAFE
+----------------------------------------------------------------
+No red flags found.
+
+================================================================
+File:     samples/02_credential_phish.eml
+Subject:  Action required: unusual sign-in activity on your account
+From:     Microsoft 365 Security <no-reply@micros0ft-account.example>
+Reply-To: support-desk@mailbox-helpdesk.example
+Links: 1   Attachments: 0
+----------------------------------------------------------------
+Risk score: 100/100   Verdict: LIKELY PHISHING
+----------------------------------------------------------------
++25  DMARC failed
+     The sending domain's DMARC policy says this message is not legitimately from it.
++25  Lookalike sender domain  [T1684.001 Impersonation]
+     micros0ft-account.example looks like microsoft but isn't one of its real domains.
++20  Link text doesn't match target  [T1566.002 Spearphishing Link]
+     Text shows 'https://login.microsoftonline.com' but the link goes to micros0ft-account.example.
++20  Lookalike link domain  [T1566.002 Spearphishing Link]
+     micros0ft-account.example imitates microsoft.
++15  SPF failed
+     SPF result was 'softfail': the sending server isn't authorized for this domain.
++15  Reply-To mismatch  [T1684.001 Impersonation]
+     Replies go to support-desk@mailbox-helpdesk.example, not the sender's domain (micros0ft-account.example).
++15  Brand in display name  [T1684.001 Impersonation]
+     Display name says 'Microsoft 365 Security' but the mail comes from micros0ft-account.example.
++10  Urgent language
+     Pressure phrases: 'within 24 hours', 'suspended', 'unusual activity'
++10  Asks for credentials or money
+     Requests: 'verify your account'
++5   Return-Path mismatch
+     Bounce address domain bulk-sender.example differs from From domain micros0ft-account.example.
+
+ATT&CK: T1566.002 Spearphishing Link; T1684.001 Impersonation
+
+================================================================
+File:     samples/03_invoice_attachment.eml
+Subject:  Invoice 4471 past due - final notice
+From:     DocuSign <dse@docusign-secure.example>
+Links: 2   Attachments: 1
+----------------------------------------------------------------
+Risk score: 100/100   Verdict: LIKELY PHISHING
+----------------------------------------------------------------
++25  DMARC failed
+     The sending domain's DMARC policy says this message is not legitimately from it.
++25  Lookalike sender domain  [T1684.001 Impersonation]
+     docusign-secure.example looks like docusign but isn't one of its real domains.
++25  HTML attachment  [T1566.001 Spearphishing Attachment]
+     Invoice_4471.pdf.html opens a local web page, often a fake login or HTML smuggling.
++20  Double extension  [T1566.001 Spearphishing Attachment]
+     Invoice_4471.pdf.html pretends to be a .pdf file.
++15  SPF failed
+     SPF result was 'fail': the sending server isn't authorized for this domain.
++15  Brand in display name  [T1684.001 Impersonation]
+     Display name says 'DocuSign' but the mail comes from docusign-secure.example.
++15  Link to raw IP address  [T1566.002 Spearphishing Link]
+     http://198.51.100.140/inv/4471 points straight at an IP address.
++10  DKIM failed
+     The DKIM signature didn't verify, so the message may have been altered or forged.
++10  URL shortener  [T1566.002 Spearphishing Link]
+     https://bit.ly/3xExample hides its real destination.
++10  Urgent language
+     Pressure phrases: 'immediately', 'final notice'
++10  Asks for credentials or money
+     Requests: 'invoice attached'
+
+ATT&CK: T1566.001 Spearphishing Attachment; T1566.002 Spearphishing Link; T1684.001 Impersonation
+
+================================================================
+File:     samples/04_bec_gift_cards.eml
+Subject:  Quick favor
+From:     Dr. Ellen Hart CEO <ellen.hart.office@gmail.com>
+Reply-To: ellen.hart.office@gmail.com
+Links: 0   Attachments: 0
+----------------------------------------------------------------
+Risk score: 35/100   Verdict: SUSPICIOUS
+----------------------------------------------------------------
++15  Executive on free email  [T1684.001 Impersonation]
+     'Dr. Ellen Hart CEO' is writing from a personal gmail.com address, a common business email compromise move.
++10  Urgent language
+     Pressure phrases: 'right away'
++10  Asks for credentials or money
+     Requests: 'gift card'
+
+ATT&CK: T1684.001 Impersonation
+
+================================================================
+SUMMARY
+  100  LIKELY PHISHING  02_credential_phish.eml
+  100  LIKELY PHISHING  03_invoice_attachment.eml
+   35  SUSPICIOUS       04_bec_gift_cards.eml
+    0  LIKELY SAFE      01_legit_newsletter.eml
