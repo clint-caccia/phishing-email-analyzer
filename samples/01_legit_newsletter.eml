@@ -1,0 +1,35 @@
+Subject: November staff newsletter
+From: Blue Ridge Family Dental <updates@blueridgedental.example>
+To: staff@blueridgedental.example
+Date: Mon, 16 Nov 2026 09:00:00 -0500
+Received: from mail.sender.example ([192.0.2.10]) by
+ mx.blueridgedental.example; Mon, 16 Nov 2026 09:00:00 -0500
+Authentication-Results:
+ mx.blueridgedental.example; spf=pass dkim=pass dmarc=pass
+Return-Path: <updates@blueridgedental.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============0250131403921556527=="
+
+--===============0250131403921556527==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi team,
+
+The holiday schedule is posted on the portal: https://portal.blueridgedental.=
+example/schedule
+
+Thanks,
+Office Manager
+
+--===============0250131403921556527==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Hi team,</p><p>The holiday schedule is posted on the <a href=3D'https://po=
+rtal.blueridgedental.example/schedule'>staff portal</a>.</p><p>Thanks,<br>Off=
+ice Manager</p>
+
+--===============0250131403921556527==--

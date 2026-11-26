@@ -1,0 +1,29 @@
+Subject: Invoice 4471 past due - final notice
+From: DocuSign <dse@docusign-secure.example>
+To: billing@blueridgedental.example
+Date: Wed, 18 Nov 2026 11:31:00 -0500
+Received: from mail.sender.example ([198.51.100.140]) by
+ mx.blueridgedental.example; Wed, 18 Nov 2026 11:31:00 -0500
+Authentication-Results:
+ mx.blueridgedental.example; spf=fail dkim=fail dmarc=fail
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============6620892141012412529=="
+
+--===============6620892141012412529==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Final notice. Invoice attached, please review and pay immediately.
+Backup link: https://bit.ly/3xExample
+Mirror: http://198.51.100.140/inv/4471
+
+--===============6620892141012412529==
+Content-Type: text/html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Invoice_4471.pdf.html"
+MIME-Version: 1.0
+
+PGh0bWw+PCEtLSBoYXJtbGVzcyBwbGFjZWhvbGRlciBmb3IgYSBmYWtlIGxvZ2luIHBhZ2UgLS0+
+PC9odG1sPg==
+
+--===============6620892141012412529==--
